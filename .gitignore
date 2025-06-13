@@ -1,24 +1,49 @@
-*.log
-.DS_Store
-.env
-.env.backup
-.env.production
-.phpactor.json
-.phpunit.result.cache
-/.fleet
-/.idea
-/.nova
-/.phpunit.cache
-/.vscode
-/.zed
-/auth.json
+# Laravel
+/vendor
 /node_modules
-/public/build
+
+# Archivos de entorno y configuración local
+/.env
+/.env.local
+/.env.*.backup
+
+# Logs y cache
+/storage/*.key
+/storage/logs
+/storage/framework/cache/data
+/storage/framework/sessions
+/storage/framework/views
+
+# Archivos de backup y temporales
+*.sqlite
+*.sqlite3
+*.log
+*.cache
+*.bak
+*.tmp
+
+# Ignorar archivos de IDE o sistema operativo
+/.idea
+/.vscode
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos generados por npm/yarn
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignorar archivos de testing o cobertura
+/phpunit.result.cache
+/coverage
+
+# Ignorar archivos compilados
 /public/hot
 /public/storage
-/storage/*.key
-/storage/pail
-/vendor
-Homestead.json
-Homestead.yaml
-Thumbs.db
+/storage/app/public
+/storage/debugbar
+
+# Ignorar archivos específicos de Laravel Mix o Vite
+/public/mix-manifest.json
+/public/css
+/public/js
