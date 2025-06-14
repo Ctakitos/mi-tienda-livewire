@@ -1,36 +1,44 @@
+<div>
 @if ($banners->count())
-    <div class="banner-carousel my-5 overflow-hidden">
-        <div id="carouselBanners" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner text-center">
+    <div class="card my-5 shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">Nuestros Banners</h5>
+        </div>
 
-                @foreach($banners as $index => $banner)
-                    <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                        <div class="position-relative">
-                            <a href="{{ $banner->link ?? '#' }}">
-                                <img src="{{ asset('storage/' . $banner->image) }}"
-                                    class="mx-auto d-block banner-img"
-                                    alt="Banner {{ $index + 1 }}">
-                            </a>
+        <div class="card-body p-0">
+            <div id="carouselBanners" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner text-center">
 
-                            @if($banner->link)
-                                <div class="carousel-caption d-none d-md-block">
-                                    <a href="{{ $banner->link }}" class="btn btn-sm btn-primary">
-                                        Ver más
-                                    </a>
-                                </div>
-                            @endif
+                    @foreach($banners as $index => $banner)
+                        <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                            <div class="position-relative">
+                                <a href="{{ $banner->link ?? '#' }}">
+                                    <img 
+                                        src="{{ $banner->image_url ?? asset('storage/' . $banner->image_path) }}"
+                                        class="mx-auto d-block banner-img w-100"
+                                        alt="Banner {{ $index + 1 }}">
+                                </a>
+
+                                @if($banner->link)
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <a href="{{ $banner->link }}" class="btn btn-sm btn-light shadow">
+                                            Ver más
+                                        </a>
+                                    </div>
+                                @endif
+                            </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
 
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanners" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselBanners" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
             </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanners" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselBanners" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
         </div>
     </div>
 @else
@@ -38,4 +46,8 @@
         No hay banners activos por el momento.
     </div>
 @endif
+
+</div>
+
+
 

@@ -1,3 +1,4 @@
+<div>
 <nav class="bg-gray-800 text-white px-6 py-4 rounded mb-6">
     <div class="flex items-center justify-between">
         <ul class="flex space-x-4">
@@ -26,6 +27,7 @@
         </div>
     </div>
 </nav>
+</div>
 
 
 

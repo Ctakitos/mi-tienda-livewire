@@ -14,6 +14,7 @@ use App\Livewire\Dashboard\BannerManager;
 use App\Livewire\Dashboard\ProductManager;
 use App\Livewire\Dashboard\ServiceManager;
 
+
 use App\Livewire\Auth\LoginForm;
 use App\Livewire\Auth\RegisterForm;
 
@@ -25,6 +26,8 @@ use App\Livewire\Dashboard\ContactUsManager;
 use App\Models\StaticContent;
 use App\Models\Banner;
 use App\Models\Product;
+use App\Models\Service;
+
 
 Route::get('/login', function () {
     return view('auth.login');
@@ -59,7 +62,7 @@ Route::get('/dashboard/contact', function () {
 Route::get('/home', function () {
     $banners = Banner::where('is_active', true)->latest()->take(5)->get();
     $products = Product::latest()->take(9)->get();  // los 9 últimos productos
-
+    
     return view('frontend.index', compact('banners', 'products'));
 })->name('home');
 
