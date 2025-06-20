@@ -62,8 +62,11 @@ Route::get('/dashboard/contact', function () {
 Route::get('/home', function () {
     $banners = Banner::where('is_active', true)->latest()->take(5)->get();
     $products = Product::latest()->take(9)->get();  // los 9 últimos productos
-    
-    return view('frontend.index', compact('banners', 'products'));
+    $services = \App\Models\Service::whereIn('id', [7,8,9,10,11,12])
+        ->where('is_active', true)
+        ->get()
+        ->keyBy('id');
+    return view('frontend.index', compact('banners', 'products', 'services'));
 })->name('home');
 
 

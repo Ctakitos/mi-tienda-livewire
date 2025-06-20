@@ -1,20 +1,21 @@
 .section-banner {
-    margin-top: 5rem; /* Ajusta según la altura real del navbar */
+    margin-top: 5px; /* Ajusta según la altura real del navbar */
     padding: 0;
     position: relative;
     z-index: 0; /* Asegúrate que el navbar esté encima */
 }
 
 #carouselBanners {
-    max-width: 1200px;
-    height: 400px;
+    max-width: 1350px;
+    width: 100%;
+    height: 750px;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 12px;
     position: relative;
 }
 
-.banner-img {
+.banner-img {   
     width: 100%;
     height: 100%;
     object-fit: cover;

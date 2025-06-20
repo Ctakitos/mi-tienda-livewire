@@ -1,14 +1,128 @@
-/* product-section.css */
-.product-card {
-    transition: transform 0.2s ease-in-out;
+.product-section {
+    padding: 2rem 0;
 }
+
+.section-header {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #212529;
+}
+
+.section-underline {
+    width: 80px;
+    height: 4px;
+    background-color: #1c8353;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+/* Tarjeta de producto */
+.product-card {
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .product-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen: Wrapper tipo "glass" */
+.product-img-wrapper {
+    width: 100%;
+    height: 320px;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+    border-bottom: 1px solid #1f3caf;
+}
+
+.badge-best-seller {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: #dc3545;
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 10;
+    pointer-events: none;
+}
+
+
+/* Imagen: tamaño fijo */
+.product-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.product-img:hover {
+    transform: scale(1.05);
+}
+
+/* Texto */
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #555;
 }
 
 .price-tag {
-    font-weight: 700;
-    color: #28a745;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #198754;
+}
+
+/* Botones */
+.btn {
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+    .product-img-wrapper {
+        height: 280px;
+    }
+
+    .product-img {
+        width: 260px;
+        height: 260px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-underline {
+        width: 60px;
+    }
 }

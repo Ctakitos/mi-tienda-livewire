@@ -1,9 +1,9 @@
 <div>
-    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top px-4 py-3">
+    <nav id="mainNavbar" class="navbar navbar-expand-lg  navbar-dark bg-transparent fixed-top px-4 py-3">
         <div class="container-fluid">
 
             {{-- Logo --}}
-            <a class="navbar-brand brand-logo" href="{{ route('home') }}">Millennials</a>
+            <a class="navbar-brand brand-logo" href="{{ route('home') }}">VagoSiempre</a>
 
             {{-- Botón hamburguesa --}}
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">

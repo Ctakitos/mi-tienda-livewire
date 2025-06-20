@@ -16,6 +16,10 @@
             }
         })();
     </script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 
     <title>@yield('title', 'Panel Admin')</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">       
@@ -28,7 +32,7 @@
 </head>
 <body class="@yield('bodyClass', 'bg-peligro')">
 
-    <main class="py-6 container">
+    <main class="py-6">
         @yield('content')
     </main>
 

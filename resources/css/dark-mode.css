@@ -161,3 +161,116 @@ body.dark-mode .btn-light:hover {
 
 
 
+
+
+/* === Modo oscuro: títulos y sección === */
+body.dark-mode .section-title {
+    color: #ffffff;
+}
+
+body.dark-mode .section-underline {
+    background-color: #57d757;
+}
+
+/* === Modo oscuro: alertas === */
+body.dark-mode .alert-success {
+    background-color: #245c2c;
+    color: #c0f2c5;
+    border-color: #2e7d32;
+}
+
+/* === Modo oscuro: tarjetas de productos === */
+body.dark-mode .product-card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode .product-card:hover {
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.08);
+}
+
+/* === Modo oscuro: imagen wrapper (glass) === */
+body.dark-mode .product-img-wrapper {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #444;
+}
+
+/* === Modo oscuro: etiquetas destacadas === */
+body.dark-mode .badge-best-seller {
+    background-color: #f44336;
+    color: #ffffff;
+}
+
+/* === Modo oscuro: textos de tarjetas === */
+body.dark-mode .card-title {
+    color: #f0f0f0;
+}
+
+body.dark-mode .card-text {
+    color: #c4c4c4;
+}
+
+/* === Modo oscuro: botones secundarios y outline === */
+body.dark-mode .btn-outline-primary {
+    border-color: #90caf9;
+    color: #90caf9;
+}
+
+body.dark-mode .btn-outline-primary:hover {
+    background-color: #90caf9;
+    color: #121212;
+}
+
+body.dark-mode .btn-primary {
+    background-color: #1976d2;
+    border-color: #1976d2;
+}
+
+body.dark-mode .btn-primary:hover {
+    background-color: #1565c0;
+    border-color: #1565c0;
+}
+
+/* === Modo oscuro: modal === */
+body.dark-mode .modal-content {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border: none;
+}
+
+body.dark-mode .modal-header {
+    border-bottom: 1px solid #444;
+}
+
+body.dark-mode .modal-footer {
+    border-top: 1px solid #444;
+}
+
+
+
+
+
+
+body.dark-mode .service-section {
+    background-color: #121212;
+}
+
+body.dark-mode .section-title {
+    color: #ffffff;
+}
+
+body.dark-mode .text-muted {
+    color: #cccccc !important;
+}
+
+body.dark-mode .btn-outline-primary {
+    border-color: #90caf9;
+    color: #90caf9;
+}
+
+body.dark-mode .btn-outline-primary:hover {
+    background-color: #90caf9;
+    color: #121212;
+}

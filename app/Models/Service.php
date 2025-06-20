@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 
 class Service extends Model
 {
@@ -24,7 +25,15 @@ public function getImageAttribute()
     return $this->image_url ?: ($this->image_path ? asset('storage/' . $this->image_path) : null);
 }
 
+
 }
+
+
+
+
+
+
+
 
 
 

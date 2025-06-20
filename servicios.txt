@@ -1,4 +1,4 @@
-<section class="service-section py-5">
+<!-- <section class="service-section py-5">
     <div class="container">
         <div class="section-header text-center mb-4">
             <h2 class="section-title">Nuestros Servicios</h2>
@@ -6,27 +6,11 @@
         </div>
 
         <div class="row gy-4">
-            @php
-                $animations = [
-                    'animate__fadeInLeft',
-                    'animate__fadeInRight',
-                    'animate__fadeInUp',
-                    'animate__fadeInDown',
-                    'animate__zoomIn',
-                    'animate__bounceIn',
-                ];
-            @endphp
-
-            @forelse ($services as $index => $service)
-                @php
-                    $animationClass = $animations[$index % count($animations)];
-                    $delay = $index * 0.2; // retraso progresivo
-                @endphp
-
+            @forelse ($services as $service)
                 <div class="col-12">
-                    <div class="service-card animate-on-scroll {{ $animationClass }} d-flex flex-column flex-md-row shadow-sm rounded p-3"
-                         style="--animate-delay: {{ $delay }}s;">
-                        
+                    <div class="service-card animate-on-scroll {{ $loop->even ? 'animate__fadeInLeft' : 'animate__fadeInRight' }} d-flex flex-column flex-md-row shadow-sm rounded p-3">
+
+
                         {{-- Imagen --}}
                         <div class="service-image-container flex-shrink-0 mb-3 mb-md-0">
                             @if ($service->image)
@@ -51,12 +35,4 @@
             @endforelse
         </div>
     </div>
-</section>
-
-
-
-
-
-
-
-
+</section> -->
