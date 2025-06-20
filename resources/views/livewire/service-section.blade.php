@@ -1,38 +1,35 @@
 <div>
-    <div class="card my-5 shadow-sm">
-        <div class="card-header bg-info text-white">
-            <h4 class="mb-0">Nuestros Servicios</h4>
-        </div>
+    <div class="container py-5">
+    <h2 class="mb-4">Nuestros Servicios</h2>
 
-        <div class="card-body">
-            @if ($services->isEmpty())
-                <p class="text-muted">No hay servicios disponibles por el momento.</p>
-            @else
-                <div class="row">
-                    @foreach ($services as $service)
-                        <div class="col-md-4 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title">{{ $service->name }}</h5>
-                                    <p class="card-text flex-grow-1">{{ Str::limit($service->description, 100) }}</p>
-                                    @if ($service->price)
-                                        <p class="mt-2 fw-bold text-success">$ {{ number_format($service->price, 2) }}</p>
-                                    @endif
-                                    <button class="btn btn-outline-info mt-auto" disabled>Solicitar</button>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
+    <div class="row">
+        @forelse ($services as $service)
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    @if ($service->image)
+                        <img src="{{ $service->image }}" class="card-img-top" alt="{{ $service->name }}" style="max-height: 200px; object-fit: cover;">
+                    @endif
+
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">{{ $service->name }}</h5>
+                        <p class="card-text">{{ Str::limit($service->description, 100) }}</p>
+
+                        @if ($service->price !== null)
+                            <p class="fw-bold text-success mt-auto">${{ number_format($service->price, 2) }}</p>
+                        @endif
+
+                        <a href="#" class="btn btn-primary mt-3">
+                            Solicitar servicio
+                        </a>
+                    </div>
                 </div>
-            @endif
-        </div>
+            </div>
+        @empty
+            <div class="col-12 text-center text-muted">
+                <p>No hay servicios disponibles en este momento.</p>
+            </div>
+        @endforelse
     </div>
 </div>
 
-
-
-
-
-
-
-
+</div>

@@ -10,11 +10,20 @@ class Service extends Model
     use HasFactory;
 
    protected $fillable = [
-        'name',
-        'description',
-        'price',
-        'is_active',
-    ];
+    'name',
+    'description',
+    'price',
+    'image_path',
+    'image_url',
+    'is_active',
+];
+
+// Accesor para obtener la imagen final
+public function getImageAttribute()
+{
+    return $this->image_url ?: ($this->image_path ? asset('storage/' . $this->image_path) : null);
+}
+
 }
 
 

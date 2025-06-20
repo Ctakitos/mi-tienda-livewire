@@ -1,0 +1,98 @@
+/* === NAVBAR MODO CLARO === */
+.navbar {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: none; /* Sin sombra */
+    border-radius: 0;  /* Sin bordes redondeados */
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+/* === LOGO === */
+.brand-logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.brand-logo:hover {
+    color: #4F46E5;
+    transform: scale(1.05);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/* === LINKS NAV === */
+.navbar .nav-link {
+    color: #000000;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    letter-spacing: 2px;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .nav-link.nav-hover:hover {
+    background-color: #efefef;
+    color: #000;
+}
+
+/* === ICONOS REDES E INTERACCIÓN === */
+.icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 3px;
+    color: #000000;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 0;
+    line-height: 1;
+}
+
+.icon-link i {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.icon-link:hover {
+    background-color: #e0e0e0;
+    color: #000;
+}
+
+.icon-link.facebook:hover {
+    background-color: #3b5998;
+    color: white;
+}
+
+.icon-link.instagram:hover {
+    background-color: #E1306C;
+    color: white;
+}
+
+.icon-link.whatsapp:hover {
+    background-color: #25D366;
+    color: white;
+}
+
+/* === BOTÓN DE CAMBIO DE TEMA === */
+.theme-toggle-btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    box-shadow: none;
+    cursor: pointer;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-toggle-btn:hover {
+    background-color: #e0e0e0;
+    color: #000000;
+}

@@ -1,0 +1,14 @@
+/* product-section.css */
+.product-card {
+    transition: transform 0.2s ease-in-out;
+}
+.product-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.price-tag {
+    font-weight: 700;
+    color: #28a745;
+    font-size: 1.2rem;
+}

@@ -1,0 +1,163 @@
+/* dark-mode.css */
+/* === MODO OSCURO GENERAL === */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* === NAVBAR OSCURO === */
+body.dark-mode .navbar {
+    background-color: rgba(0, 0, 0, 0.85) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: none; /* Eliminado brillo */
+    border-radius: 0;  /* Bordes planos */
+    transition: background-color 0.3s;
+}
+
+body.dark-mode .navbar-brand,
+body.dark-mode .nav-link {
+    color: #ffffff !important;
+}
+
+body.dark-mode .nav-link.nav-hover:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #ffffff !important;
+}
+
+/* === LOGO OSCURO === */
+body.dark-mode .brand-logo {
+    color: #ffffff;
+}
+
+body.dark-mode .brand-logo:hover {
+    color: #60a5fa; /* Azul claro */
+    transform: scale(1.05);
+    text-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+/* === ICONOS REDES === */
+body.dark-mode .icon-link {
+    color: #ffffff;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .icon-link:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+body.dark-mode .icon-link.facebook:hover {
+    background-color: #3b5998;
+}
+
+body.dark-mode .icon-link.instagram:hover {
+    background-color: #E1306C;
+}
+
+body.dark-mode .icon-link.whatsapp:hover {
+    background-color: #25D366;
+}
+
+/* === BOTÓN CAMBIO DE TEMA === */
+body.dark-mode .theme-toggle-btn {
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .theme-toggle-btn:hover {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+/* === FORMULARIOS Y CAMPOS === */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    color: #e0e0e0;
+}
+
+body.dark-mode input:focus,
+body.dark-mode textarea:focus,
+body.dark-mode select:focus {
+    border-color: #0d6efd;
+    outline: none;
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+/* === CARDS === */
+body.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border: none;
+}
+
+/* === BOTONES === */
+body.dark-mode .btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #ffffff;
+}
+
+body.dark-mode .btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+body.dark-mode .btn-outline-light {
+    border-color: #f0f0f0;
+    color: #f0f0f0;
+}
+
+body.dark-mode .btn-outline-light:hover {
+    background-color: #f0f0f0;
+    color: #121212;
+}
+
+/* === ELEMENTOS DESTACADOS === */
+body.dark-mode .price-tag {
+    color: #57d757;
+}
+
+/* === TRANSICIONES GLOBALES === */
+body,
+.navbar,
+.nav-link,
+.brand-logo,
+.icon-link,
+.theme-toggle-btn,
+input,
+textarea,
+select,
+.card,
+.btn {
+    transition: all 0.3s ease;
+}
+
+
+
+body.dark-mode .carousel-caption {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+body.dark-mode .btn-light {
+    background-color: #e0e0e0;
+    color: #121212;
+}
+
+body.dark-mode .btn-light:hover {
+    background-color: #ffffff;
+}
+
+
+
